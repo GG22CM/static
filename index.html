@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../js/jquery-3.5.0.min.js"></script>
+    <script src="../js/jquery.fullPage.min.js"></script>
+    <link rel="stylesheet" href="../css/like360.css">
+    <script>
+        $(function(){
+            setTimeout(function(){
+                $(".first").addClass("current");
+            },500);
+            $('#360page').fullpage({
+                "sectionsColor":["pink","skyBlue","lightGreen","purple","red"],
+                "afterLoad":function(anchorLink,index){
+                    $(".section").removeClass("current");
+                    setTimeout(function(){
+                        $(".section").eq(index-1).addClass("current");
+                        // alert(index);
+                        if(index==5){
+                            $(".currentText").each(function(i,n){
+                                $(this).css("transition",("opacity "+(1+0.2*i)+"s "+"1s"));
+                            })
+                        }
+                    },200);
+                }
+            });
+        });
+    </script>
+
+</head>
+<body>
+<div id="360page">
+    <div class="section first">
+        <div class="logo"></div>
+        <div class="text">如此，即可往复</div>
+        <div class="intro">向下，为了通向何方。</div>
+    </div>
+    <div class="section second">
+        <div class="leftImg">
+            <img src="../imgs/girl1_01.png" alt="">
+            <img src="../imgs/girl1_02.png" alt="">
+            <img src="../imgs/girl1_03.png" alt="">
+            <img src="../imgs/girl1_04.png" alt="">
+            <img src="../imgs/girl1_05.png" alt="">
+            <img src="../imgs/girl1_06.png" alt="">
+            <img src="../imgs/girl1_07.png" alt="">
+            <img src="../imgs/girl1_08.png" alt="">
+            <img src="../imgs/girl1_09.png" alt="">
+        </div>
+        <div class="rightText">
+            <p>你也想成为英雄吗</p>
+            <p>那为何沉沦</p>
+        </div>
+    </div>
+    <div class="section third">
+        <div class="info">
+            <h3>你所掉落的，是这把时钟剑么？</h3>
+            <p>或是另一把石中剑？</p>
+        </div>
+        <div class="clock">
+                <div class="sword"></div>
+        </div>
+    </div>
+    <div class="section forth">
+        <div class="search">
+            <div class="searchBar">
+
+            </div>
+            <div class="searchText">
+                下一步，该怎么走？
+            </div>
+            <div class="searchContent">
+
+            </div>
+        </div>
+        <div class="info">
+            <p>如你所见，</p>
+            <p>你我皆凡人</p>
+        </div>
+    </div>
+    <div class="section fifth">
+        <div class="manuscript">
+            <p class="currentText">我知道我不是英雄，可你怎么知道你不是？</p>
+            <p class="currentText">我知道我不是英雄，可你怎么知道你不是？</p>
+            <p class="currentText">我知道我不是英雄，可你怎么知道你不是？</p>
+            <p class="currentText">我知道我不是英雄，可你怎么知道你不是？</p>
+            <p class="currentText">我知道我不是英雄，可你怎么知道你不是？</p>
+            <p class="currentText">我知道我不是英雄，可你怎么知道你不是？</p>
+            <p class="currentText">我知道我不是英雄，可你怎么知道你不是？</p>
+            <p class="currentText">我知道我不是英雄，可你怎么知道你不是？</p>
+            <p class="currentText">我知道我不是英雄，可你怎么知道你不是？</p>
+            <p class="currentText">我知道我不是英雄，可你怎么知道你不是？</p>
+            <div class="borderDiv"></div>
+            <div class="borderDiv"></div>
+            <div class="borderDiv"></div>
+            <div class="borderDiv"></div>
+        </div>
+
+    </div>
+</div>
+
+</body>
+</html>
