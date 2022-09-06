@@ -1,0 +1,99 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    text-align: center;
+}
+
+h1{
+    height: 70px;
+    line-height: 70px;
+}
+
+.total{
+    width: 720px;
+    margin:0 auto;
+    position:relative;
+}
+
+.total>video{
+   width: 100%;
+    display: none;
+    position: absolute;
+}
+.total>img{
+    width: 100%;
+    height:405px;
+    display: block;
+    position: absolute;
+
+}
+
+.total>.tools{
+    width: 100%;
+    height: 40px;
+    background:black;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    position: absolute;
+    top:405px;
+
+}
+.total>.tools>*{
+    margin: 5px;
+}
+
+.total>.tools>a{
+    width: 50px;
+
+
+}
+
+.total>.tools>.progress{
+    width: 450px;
+    height:15px;
+    background:  #A9A9A9;
+    position: relative;
+    top:7px;
+    border-radius: 4rem;
+}
+.total>.tools>.progress>div{
+    position:absolute;
+    height: 15px;
+    border-radius: 4rem;
+    z-index: 1;
+}
+
+.total>.tools>.progress>.load{
+    width:70%;
+    background: #cccccc;
+    z-index: 2;
+}
+
+.total>.tools>.progress>.current{
+    width:0%;
+    background: #ffffff;
+    z-index: 3;
+}
+
+.total>.tools>.progress>.bar{
+    width:100%;
+    z-index: 999;
+}
+
+.total>.tools>.time{
+    width: 150px;
+    line-height: 30px;
+    color:white;
+}
+.total>.tools>.time>span{
+    color:white;
+    letter-spacing: 1px;
+    margin-right: 5px;
+    margin-left: 5px;
+    font-size:5px;
+}
+

@@ -1,0 +1,481 @@
+
+
+@font-face {
+    font-family: 'webfont1';
+    font-display: swap;
+    src: url('../fonts/webfont.eot'); /* IE9 */
+    src: url('../fonts/webfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('../fonts/webfont.woff2') format('woff2'),
+    url('../fonts/webfont.woff') format('woff'), /* chrome、firefox */
+    url('../fonts/webfont.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+    url('../fonts/webfont.svg#webfont') format('svg'); /* iOS 4.1- */
+}
+@font-face {
+    font-family: 'webfont2';
+    font-display: swap;
+    src: url('../fonts/font2/webfont.eot'); /* IE9 */
+    src: url('../fonts/font2/webfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('../fonts/font2/webfont.woff2') format('woff2'),
+    url('../fonts/font2/webfont.woff') format('woff'), /* chrome、firefox */
+    url('../fonts/font2/webfont.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+    url('../fonts/font2/webfont.svg#webfont') format('svg'); /* iOS 4.1- */
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.section{
+    overflow: hidden;
+}
+
+.first .logo{
+    width: 350px;
+    height: 350px;
+    margin: 0 auto;
+    margin-top:90px;
+    background-image: url(../imgs/littleGirl.png);
+    background-size: cover;
+}
+
+.first .text{
+    width: 100%;
+    text-align: center;
+    font-family:"webfont1" ;
+    font-size: 70px;
+    color:white;
+    margin: 40px 0;
+    letter-spacing: 120px;
+    opacity: 0.5;
+    transition: letter-spacing 1s,opacity 1s;
+}
+
+.first .intro{
+    width: 100%;
+    text-align: center;
+    font-family: "webfont2";
+    font-size: 90px;
+    color: #fff;
+}
+.first.current .text{
+    letter-spacing: 0px;
+    opacity: 1;
+}
+
+/*第二屏*/
+.second>div{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.second .leftImg{
+    width: 480px;
+    height: 450px;
+    font-size: 0px;
+    flex-shrink: 0;
+    transform: scale(1.5);
+}
+.second .rightText{
+    width: 630px;
+    height: 184px;
+    color: #fff;
+    font-size: 70px;
+    flex-shrink: 0;
+    margin-left: -200px;
+
+}
+
+/*设置左边图片的变换*/
+.leftImg>img{
+    opacity: 0;
+    transition: transform 1s,opacity 1s;
+}
+
+
+
+.leftImg>img:nth-of-type(1){
+    transform: translate(-50px,100px) rotate(-90deg);
+}
+
+.leftImg>img:nth-of-type(2){
+    transform: translate(-50px,-300px) rotate(90deg);
+}
+
+.leftImg>img:nth-of-type(3){
+    transform: translate(700px,200px) rotate(-20deg);
+}
+
+.leftImg>img:nth-of-type(4){
+    transform: translate(400px,120px) rotate(-80deg);
+}
+
+.leftImg>img:nth-of-type(5){
+    transform: translate(-450px,100px) rotate(60deg);
+}
+
+.leftImg>img:nth-of-type(6){
+    transform: translate(225px,300px) rotate(67deg);
+}
+
+.leftImg>img:nth-of-type(7){
+    transform: translate(30px,300px) rotate(270deg);
+}
+
+.leftImg>img:nth-of-type(8){
+    transform: translate(240px,128px) rotate(195deg);
+}
+
+.leftImg>img:nth-of-type(9){
+    transform: translate(670px,-380px) rotate(-184deg);
+}
+
+.second.current .leftImg>img{
+    transform: none;
+    opacity: 1;
+}
+
+/*第三屏了*/
+.third{
+    position: relative;
+}
+
+.third .info{
+    color:white;
+    position: absolute;
+    width: 900px;
+    top:50%;
+    left: 50%;
+    transform: translate(-100%,-50%);
+}
+
+.third .info>h3{
+    font-family: "KaiTi";
+    font-size: 60px;
+}
+.third .info>p{
+    font-size: 60px;
+    font-style: italic;
+    font-weight: lighter;
+    background-color: #90ee90;
+}
+
+.third .clock{
+    width: 650px;
+    height: 651px;
+    background-image: url(../imgs/clock.png);
+    position: absolute;
+    top:50%;
+    right: 50%;
+    transform: translate(120%,-50%);
+}
+
+.third .clock .sword{
+    width: 400px;
+    height: 300px;
+    background-image: url(../imgs/sword.png);
+    position: absolute;
+    top: 900px;
+    left: -900px;
+    transform-origin: 4% 96%;
+
+}
+
+.third.current .clock .sword{
+    animation:swordAnimation 3s forwards;
+}
+
+@keyframes swordAnimation {
+    0%{
+        top: 900px;
+        left: -900px;
+        transform: none;
+    }
+    40%{
+        top:35px;
+        left: 307px;
+        transform: none;
+    }
+    /*80%{*/
+    /*    top:35px;*/
+    /*    left: 307px;*/
+    /*    transform: rotate(160deg);*/
+    /*}*/
+    100%{
+        top:35px;
+        left: 307px;
+        transform: rotate(160deg) scale(0.4);
+    }
+}
+
+/*第四屏*/
+.forth{
+    position: relative;
+}
+.forth .search{
+    position: absolute;
+    width: 800px;
+    height: 540px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-100%,-50%);
+}
+
+@font-face {
+    font-family: 'iconfontSearch';
+    src: url('../fonts/font3/iconfont.ttf?t=1623303161914') format('truetype');
+}
+
+
+
+.forth .search>.searchBar{
+
+    font-family: "iconfontSearch";
+    font-size: 30px;
+    color: white;
+    text-align: right;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 20px;
+    box-sizing: border-box;
+    width: 0px;
+    overflow: hidden;
+}
+
+.forth .search>.searchBar::before{
+    content: "\e55d";
+    margin-right: 20px;
+}
+
+.forth .search>.searchText{
+    font-size: 20px;
+    font-weight: lighter;
+    color: white;
+    position: absolute;
+    top: 7px;
+    left: 30px;
+    overflow: hidden;
+    width: 0%;
+    height: 25px;
+}
+
+.forth .search>.searchContent{
+    width:760px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    background-image: url(../imgs/nextStep.png);
+    box-shadow: 0 0 30px 1px #000 inset;
+    height: 0;
+
+}
+
+
+.forth .info{
+    width: 50%;
+    font-size: 70px;
+    font-weight: bolder;
+    letter-spacing: 10px;
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(0,-50%);
+}
+.forth .info>p{
+    margin-left: 300px;
+
+}
+
+/*第四屏动画效果:搜索栏*/
+.forth.current .search>.searchBar{
+    animation-name: searchBarAnimation;
+    border: 1px solid white;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+
+}
+
+@keyframes searchBarAnimation {
+    0%{
+        width: 0;
+        box-shadow: none;
+    }
+    80%{
+        width: 800px;
+        box-shadow: none;
+    }
+    100%{
+        width: 800px;
+        box-shadow: 0 0 30px 3px #fff;
+    }
+}
+
+/*第四屏动画效果:搜索文本*/
+
+.forth.current .search>.searchText{
+    animation: searchTextAnimation 2s 1s forwards steps(9);
+}
+
+
+@keyframes searchTextAnimation {
+    from{
+        width: 0;
+    }
+    to{
+        width: 180px;
+    }
+}
+.forth.current .search>.searchContent{
+    animation:searchContentAnimation 1s 3s forwards;
+
+
+}
+
+@keyframes searchContentAnimation {
+    0%{
+        border:1px solid #fff;
+        border-top: none;
+        height: 0;
+
+    }
+
+    100%{
+        border:1px solid #fff;
+        border-top: none;
+        height: 500px;
+
+    }
+}
+
+/*第五屏*/
+.fifth{
+    position: relative;
+}
+.fifth .manuscript{
+    width: 50%;
+    height: 70%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    font-size: 30px;
+    font-family:"KaiTi" ;
+    color: white;
+    text-justify:inter-ideograph;
+    transform: translate(-50%,-50%);
+}
+
+.fifth .manuscript>p{
+    height:65px;
+    line-height: 65px;
+    box-sizing: border-box;
+    padding-left: 20px;
+    border-bottom: 1px dashed white;
+    opacity: 0;
+    transition-delay: 1s;
+
+}
+.fifth .manuscript>.borderDiv:nth-of-type(1){
+    width: 1px;
+    height: 100%;
+    background-color: #fff;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform-origin: top;
+    transform: translate(0,200%) scaleY(2);
+
+}
+.fifth .manuscript>.borderDiv:nth-of-type(2){
+    width: 100%;
+    height: 1px;
+    background-color: #fff;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform-origin: right;
+    transform: translate(-200%) scaleY(2);
+}
+.fifth .manuscript>.borderDiv:nth-of-type(3){
+    width: 1px;
+    height: 100%;
+    background-color: #fff;
+    position: absolute;
+    top: 0;
+    right: 1px;
+    transform-origin: bottom;
+    transform: translate(0,-200%) scaleY(2);
+}
+.fifth .manuscript>.borderDiv:nth-of-type(4){
+    width: 100%;
+    height: 1px;
+    background-color: #fff;
+    position: absolute;
+    bottom: 1px;
+    left: 0;
+    transform-origin: left;
+    transform: translate(200%) scaleY(2);
+}
+
+.fifth.current .manuscript>.borderDiv:nth-of-type(1){
+    animation:firstAnimation 1s forwards;
+}
+.fifth.current .manuscript>.borderDiv:nth-of-type(2){
+    animation:secondAnimation 1s forwards;
+}
+
+.fifth.current .manuscript>.borderDiv:nth-of-type(3){
+    animation:thirdAnimation 1s forwards;
+}
+.fifth.current .manuscript>.borderDiv:nth-of-type(4){
+    animation:forthAnimation 1s forwards;
+}
+
+@keyframes firstAnimation {
+    0%{
+        transform: translate(0,200%) scaleY(2);
+    }
+    50%{
+        transform: translate(0,0) scaleY(2);
+    }
+    100%{
+        transform: translate(0,0) scaleY(1);
+    }
+}
+@keyframes secondAnimation {
+    0%{
+        transform: translate(-200%) scaleX(2);
+    }
+    50%{
+        transform: translate(0,0) scaleX(2);
+    }
+    100%{
+        transform: translate(0,0) scaleX(1);
+    }
+}
+@keyframes thirdAnimation {
+    0%{
+        transform: translate(0,-200%) scaleY(2);
+    }
+    50%{
+        transform: translate(0,0) scaleY(2);
+    }
+    100%{
+        transform: translate(0,0) scaleY(1);
+    }
+}
+@keyframes forthAnimation {
+    0%{
+        transform: translate(200%) scaleX(2);
+    }
+    50%{
+        transform: translate(0,0) scaleX(2);
+    }
+    100%{
+        transform: translate(0,0) scaleX(1);
+    }
+}
+
+/*第五屏文本过度*/
+.current.fifth .manuscript>p{
+    opacity: 1;
+}
